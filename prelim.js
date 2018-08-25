@@ -1,6 +1,29 @@
-let data = [ {
-    "firstImage":"img01"}];
+let images = new image01(300, 300);
+images.src = "CardBack.jpg";
+document.body.appendChild(images);
+
+let data = [ 
+    {img01:"greyA.jpg"}, 
+    {img02:"greyB.jpg"},
+    {img03:"navyA.jpg"},
+    {img04:"navyB.jpg"}
+    ];
+    for(let i = 0; i<data.length; i++){
+        contact = data[i];
+
     //establish an array with which to pull the data from? Array of obj?
+
+};
+
+let fileSelect = document.getElementById("fileSelect"),
+  fileElem = document.getElementById("fileElem");
+
+fileSelect.addEventListener("click", function (e) {
+  if (fileElem) {
+    fileElem.click();
+  }
+}, false);
+//trying to add event listener for the click, but should be applied to all images... .and also, should be limited to only one click per image, and then reset. 
 
 
 data.forEach(function (element) {
