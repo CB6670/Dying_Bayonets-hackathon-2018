@@ -1,4 +1,6 @@
-let data = //establish an array with which to pull the data from? Array of obj?
+let data = [ {
+    "firstImage":"img01"}];
+    //establish an array with which to pull the data from? Array of obj?
 
 
 data.forEach(function (element) {
@@ -19,3 +21,15 @@ data.forEach(function (element) {
     emailCell.innerHTML = element.email;
 
 });
+
+function flipCard(){
+    if(basicH1.innerHTML === "This is a heading"){
+        basicH1.innerHTML = "Changed by JavaScript Magic!"
+        image01.src = "marvin02.jpg";
+    }else{
+        basicH1.innerHTML = "This is a heading";
+        image01.src = "marvin01.jpg";
+    }
+}
+button01.addEventListener('click',changeH1);
+blueButton.addEventListener('click',makeBlue);
