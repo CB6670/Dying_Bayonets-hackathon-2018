@@ -1,6 +1,6 @@
-let images = new image01(300, 300);
-images.src = "CardBack.jpg";
-document.body.appendChild(images);
+// // let images = new image01(300, 300);
+// // images.src = "CardBack.jpg";
+// // document.body.appendChild(images);
 
 let data = [ 
     {img01:"greyA.jpg"}, 
@@ -8,12 +8,7 @@ let data = [
     {img03:"navyA.jpg"},
     {img04:"navyB.jpg"}
     ];
-    for(let i = 0; i<data.length; i++){
-        contact = data[i];
-
-    //establish an array with which to pull the data from? Array of obj?
-
-};
+    
 
 let fileSelect = document.getElementById("fileSelect"),
   fileElem = document.getElementById("fileElem");
@@ -23,10 +18,13 @@ fileSelect.addEventListener("click", function (e) {
     fileElem.click();
   }
 }, false);
-//trying to add event listener for the click, but should be applied to all images... .and also, should be limited to only one click per image, and then reset. 
+// //trying to add event listener for the click, but should be applied to all images... .and also, should be limited to only one click per image, and then reset.
 
 
 data.forEach(function (element) {
+    let row = data;
+    for(let i = 0; i<data.length; i++){
+         row = data[i];
     // create and append table row
     let row = document.createElement("tr");
     mainTable.appendChild(row);
@@ -54,5 +52,35 @@ function flipCard(){
         image01.src = "marvin01.jpg";
     }
 }
-button01.addEventListener('click',changeH1);
-blueButton.addEventListener('click',makeBlue);
+let data = new Array();
+
+data[0] = new Image();
+data[0].src = 'greyA.jpg';
+
+data[1] = new Image();
+data[1].src = 'greyB.jpg';
+
+data[2] = new Image();
+data[2].src = 'navyA.jpg';
+
+data[2] = new Image();
+data[2].src = 'navyB.jpg';
+
+
+function nextImage(element)
+{
+    let img = document.getElementById(element);
+
+    for(let i = 0; i < data.length;i++)
+    {
+        if(data[i].src == img.src)
+        {
+            if(i === data.length){
+                document.getElementById(element).src = imgArray[0].src;
+                break;
+            }
+            document.getElementById(element).src = imgArray[i+1].src;
+            break;
+        }
+    }
+}
