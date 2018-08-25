@@ -25,6 +25,11 @@ gamePics{
     margin: auto;
 }
 
+instructions{
+    font-size: 30px;
+    text-decoration: underline;
+}
+
 td{
     border: 1px solid green;
     padding: 5px;
