@@ -45,6 +45,11 @@ container{
     color:  #058ed9;
 }
 
+button{
+    color: blue;
+    font-weight: bold;
+}
+
 /* bd{
     background-color: #12253d;
 text-emphasis-color: #058ed9;
